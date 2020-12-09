@@ -1,0 +1,5 @@
+for each (entry in input.txt)
+match = 2020-entry
+ for each (entry2 in input.txt)
+  if (entry2 = match) return match*entry2
+ 

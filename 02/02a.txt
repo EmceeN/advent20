@@ -1,0 +1,4 @@
+for each entry in list:
+	tokenise 0 to  " "
+		tokenise 0 to '-'
+			
