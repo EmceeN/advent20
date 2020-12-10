@@ -8,7 +8,6 @@ inputInts.append(inputInts[numAdapters-1] +3)
 i, oneJolt, threeJolts, highJoltage = 0,0,0,0
 permutations, withinThree = 1,0
 inARow = 0
-permutations = 1
 
 def GetPermutations(n):
 	tList = [0,0,1]
