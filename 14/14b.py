@@ -26,9 +26,7 @@ for line in inputs:
 		bitValues = {}
 		mask = line.split(" = ")[1].strip()
 		a=len(mask)
-		for value in mask:
-			bitValues[str(a-1)]=value
-			a-=1
+		for value in mask: bitValues[str(a-1)]=value; a-=1
 	else:
 		changeArray,memChanges=[],[]
 		inst = line.split(" = ")
@@ -37,9 +35,7 @@ for line in inputs:
 		for bit in bitValues.keys():
 			if bitValues[bit] == "X": changeArray.append(int(bit))
 			elif bitValues[bit] == "1": memPtr = ChangeBit(memPtr,int(bit),1)
-		i=0
-		memValues,changeMem = 1, []
-		ChangeArray(i,memPtr)	
+		ChangeArray(0,memPtr)	
 		for addr in memChanges: mem[str(addr)] = writeVal
 memValues = 0
 for value in mem: memValues += int(mem[value])
