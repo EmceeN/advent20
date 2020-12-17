@@ -1,7 +1,7 @@
 #17 - The Meaning of Liff 3D
 from datetime import datetime
-input = open('input.txt', 'r')
-inputs = input.readlines()
+with open('input.txt', 'r') as input:
+	inputs = input.readlines()
 gameOfLife = {}
 start = datetime.now()
 print (start)
@@ -32,7 +32,7 @@ def checkCell(w,z,x,y):
 def iterate():
 	nextStep = {}
 	minW = min(gameOfLife.keys()); maxW = max(gameOfLife.keys())
-	minZ = min(gameOfLife[0].keys()); maxZ = max(gameOfLife.keys())
+	minZ = min(gameOfLife[0].keys()); maxZ = max(gameOfLife[0].keys())
 	minX = min(gameOfLife[0][0].keys()); maxX = max(gameOfLife[0][0].keys())
 	minY = min(gameOfLife[0][0][0].keys()); maxY = max(gameOfLife[0][0][0].keys())
 	for h in range(minW-1,maxW+2):
