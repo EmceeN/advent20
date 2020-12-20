@@ -33,7 +33,7 @@ for line in inputs:
 					newTokens = rules[token].split(" ")
 					tokens.pop(tIndex)
 					print (tokens, type(tokens))
-					for newToken in range(len(newTokens)): tokens.insert(tIndex+newToken, newTokens[newToken]); print(tokens,type(tokens))
+					for newToken in range(len(newTokens)): tokens.insert(tIndex+newToken, newTokens[newToken]);
 			if k >10000: print ("Breaking at 10k..."); break
 			k+=1
 		checkRule = ""
